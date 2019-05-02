@@ -1,0 +1,309 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:layout_weight="1">
+
+
+    <RelativeLayout
+        android:id="@+id/LeftLayout"
+        android:background="@android:color/darker_gray"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/Team1"
+            android:padding="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:textSize="20sp"
+            android:text="Team 1"/>
+
+        <TextView
+            android:id="@+id/Team1Outs"
+            android:text="Outs = 0"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/Team1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/TotalTeam1"
+            android:text="Hit/Walks = 0"
+            android:layout_margin="15dp"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/Team1Outs"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/StrikesTeam1"
+            android:text="Strikes:"
+            android:textColor="@android:color/black"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/TotalTeam1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/Strike1Team1"
+            android:text="⚪"
+            android:textSize="10sp"
+            android:textAlignment="center"
+            android:layout_below="@id/StrikesTeam1"
+            android:layout_centerHorizontal="true"
+            android:layout_width="50dp"
+            android:layout_height="50dp" />
+        <TextView
+            android:id="@+id/Strike2Team1"
+            android:text="⚪"
+            android:textSize="10sp"
+            android:textAlignment="center"
+            android:layout_below="@id/Strike1Team1"
+            android:layout_centerHorizontal="true"
+            android:layout_width="50dp"
+            android:layout_height="50dp" />
+        <TextView
+            android:id="@+id/Strike3Team1"
+            android:text="⚪"
+            android:textSize="10sp"
+            android:textAlignment="center"
+            android:layout_below="@id/Strike2Team1"
+            android:layout_centerHorizontal="true"
+            android:layout_width="50dp"
+            android:layout_height="50dp" />
+
+        <TextView
+            android:id="@+id/BallsTeam1"
+            android:text="Balls:"
+            android:layout_marginTop="30dp"
+            android:textColor="@android:color/black"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/Strike3Team1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/Ball1Team1"
+            android:text="⚪"
+            android:textSize="10sp"
+            android:textAlignment="center"
+            android:layout_below="@id/BallsTeam1"
+            android:layout_centerHorizontal="true"
+            android:layout_width="50dp"
+            android:layout_height="50dp" />
+        <TextView
+            android:id="@+id/Ball2Team1"
+            android:text="⚪"
+            android:textSize="10sp"
+            android:textAlignment="center"
+            android:layout_below="@id/Ball1Team1"
+            android:layout_centerHorizontal="true"
+            android:layout_width="50dp"
+            android:layout_height="50dp" />
+        <TextView
+            android:id="@+id/Ball3Team1"
+            android:text="⚪"
+            android:textSize="10sp"
+            android:textAlignment="center"
+            android:layout_below="@id/Ball2Team1"
+            android:layout_centerHorizontal="true"
+            android:layout_width="50dp"
+            android:layout_height="50dp" />
+        <TextView
+            android:id="@+id/Ball4Team1"
+            android:text="⚪️"
+            android:textSize="10sp"
+            android:textAlignment="center"
+            android:layout_below="@id/Ball3Team1"
+            android:layout_centerHorizontal="true"
+            android:layout_width="50dp"
+            android:layout_height="50dp" />
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/CenterLayout"
+        android:background="@android:color/white"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/GameName"
+            android:padding="20dp"
+            android:textColor="@android:color/black"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:textSize="20sp"
+            android:text="BaseBall"/>
+
+        <Button
+            android:id="@+id/StrikeButton"
+            android:layout_marginTop="50dp"
+            android:layout_centerHorizontal="true"
+            android:text="Strike!"
+            android:onClick="strike"
+            android:layout_below="@id/GameName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <Button
+            android:id="@+id/Ball"
+            android:layout_marginTop="50dp"
+            android:layout_centerHorizontal="true"
+            android:text="Ball!"
+            android:onClick="ball"
+            android:layout_below="@id/StrikeButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <Button
+            android:id="@+id/Reset"
+            android:layout_marginTop="50dp"
+            android:layout_centerHorizontal="true"
+            android:text="Reset"
+            android:onClick="reset"
+            android:layout_below="@id/Ball"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <Button
+            android:id="@+id/Point"
+            android:layout_marginTop="50dp"
+            android:layout_centerHorizontal="true"
+            android:text="Hit!/Walk"
+            android:onClick="point"
+            android:layout_below="@id/Reset"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/RightLayout"
+        android:background="@android:color/holo_blue_dark"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/Team2"
+            android:padding="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:textSize="20sp"
+            android:text="Team 2"/>
+
+
+        <TextView
+            android:id="@+id/Team2Outs"
+            android:text="Outs = 0"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/Team2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/TotalTeam2"
+            android:text="Hit/Walks = 0"
+            android:layout_margin="15dp"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/Team2Outs"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/StrikesTeam2"
+            android:text="Strikes:"
+            android:textColor="@android:color/black"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/TotalTeam2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/Strike1Team2"
+            android:text="⚪"
+            android:textSize="10sp"
+            android:textAlignment="center"
+            android:layout_below="@id/StrikesTeam2"
+            android:layout_centerHorizontal="true"
+            android:layout_width="50dp"
+            android:layout_height="50dp" />
+        <TextView
+            android:id="@+id/Strike2Team2"
+            android:text="⚪"
+            android:textSize="10sp"
+            android:textAlignment="center"
+            android:layout_below="@id/Strike1Team2"
+            android:layout_centerHorizontal="true"
+            android:layout_width="50dp"
+            android:layout_height="50dp" />
+        <TextView
+            android:id="@+id/Strike3Team2"
+            android:text="⚪"
+            android:textSize="10sp"
+            android:textAlignment="center"
+            android:layout_below="@id/Strike2Team2"
+            android:layout_centerHorizontal="true"
+            android:layout_width="50dp"
+            android:layout_height="50dp" />
+
+        <TextView
+            android:id="@+id/BallsTeam2"
+            android:text="Balls:"
+            android:layout_marginTop="30dp"
+            android:textColor="@android:color/black"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/Strike3Team2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/Ball1Team2"
+            android:text="⚪"
+            android:textSize="10sp"
+            android:textAlignment="center"
+            android:layout_below="@id/BallsTeam2"
+            android:layout_centerHorizontal="true"
+            android:layout_width="50dp"
+            android:layout_height="50dp" />
+        <TextView
+            android:id="@+id/Ball2Team2"
+            android:text="⚪"
+            android:textSize="10sp"
+            android:textAlignment="center"
+            android:layout_below="@id/Ball1Team2"
+            android:layout_centerHorizontal="true"
+            android:layout_width="50dp"
+            android:layout_height="50dp" />
+        <TextView
+            android:id="@+id/Ball3Team2"
+            android:text="⚪"
+            android:textSize="10sp"
+            android:textAlignment="center"
+            android:layout_below="@id/Ball2Team2"
+            android:layout_centerHorizontal="true"
+            android:layout_width="50dp"
+            android:layout_height="50dp" />
+        <TextView
+            android:id="@+id/Ball4Team2"
+            android:text="⚪"
+            android:textSize="10sp"
+            android:textAlignment="center"
+            android:layout_below="@id/Ball3Team2"
+            android:layout_centerHorizontal="true"
+            android:layout_width="50dp"
+            android:layout_height="50dp" />
+
+    </RelativeLayout>
+
+</LinearLayout>
